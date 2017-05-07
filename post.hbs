@@ -1,0 +1,64 @@
+{{!< default}}
+
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
+
+{{#post}}
+
+<div style="margin-top: 100px; max-height: 400px; overflow-y:hidden; ">
+
+{{#if image}}<img class="image" src="{{image}}" style="width: 100%;margin-top:-180px;margin-left:auto;margin-right:auto">{{/if}}
+
+</div>
+
+<div class="columns">
+  <div class="column is-two-thirds">
+{{!-- Everything inside the #post tags pulls data from the post --}}
+
+<section class="section is-small has-text-centered">
+  <h1 class="title is-2 "><a href="{{url}}">{{title}}</a></h1>
+ <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+
+        
+       
+</section>
+
+        <section class="section content post-content">
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+
+        {{!-- Everything inside the #author tags pulls data from the author --}}
+       
+        
+        </footer>
+
+    </article>
+</main>
+
+<!-- {{>post-nav}} -->
+
+{{/post}}
+</div>
+<div class="column">
+  
+  
+  <div class="section">
+  {{> subscribe}}
+  </div>
+
+    {{> share}}
+
+   
+ 
+  {{> blogroll }}
+  
+ {{> instagram}}
+  
+  
+  
+  
+</div>
+</div>
+</div>

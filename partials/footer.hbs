@@ -1,0 +1,69 @@
+<footer class="footer">
+  <div class="container">
+
+    <div class="columns">
+    <div class="column has-text-centered">
+      <div class="content is-small" style="padding-top: 36px">
+        <img src="/assets/fabricademy.svg" style="width:100%;max-width: 200px"><br>
+        A new texitle Academy<br>
+          (c) 2017 all rights reserved</div>
+      <hr class="is-hidden-tablet"/>
+    </div>
+    <div class="column">
+          <div class="footer-menu">
+              <ul class="menu-list ">
+            <li><a>About</a></li>
+            <li><a>Program</a></li>
+            <li><a>Faculty</a></li>
+            <li><a>Sites</a></li>
+            <li><a>Bootcamp</a></li>
+            <li><a>Wiki</a></li>
+            <li><a>Join</a></li>
+            <li><a>Contacts</a></li>
+          </div>
+    </div>
+    <div class="column">
+      <aside class="menu social-menu">
+        <hr class="is-hidden-tablet"/>
+        <p class="menu-label">
+           Follow us on:
+         </p>
+        <ul class="menu-list ">
+      <li><a><i class="fa fa-twitter"></i> Twitter</a></li>
+      <li><a><i class="fa fa-facebook"></i> Facebook</a></li>
+      <li><a><i class="fa fa-instagram"></i> Instagram</a></li>
+      <li><a><i class="fa fa-pinterest"></i> Pinterest</a></li>
+    </ul>
+      </aside>
+    </div>
+    <div class="column is-half">
+      <hr class="is-hidden-tablet"/>
+      <div class="has-text-centered">
+      <div class="box">
+      {{!-- Email subscribe form at the bottom of the page --}}
+      {{#if @labs.subscribers}}
+      <section class="gh-subscribe">
+          <h3 class="gh-subscribe-title title is-4">Subscribe to {{@blog.title}} newsletter</h3>
+          <p>Get the latest posts delivered right to your inbox.</p>
+          <div style="margin-top: 16px">
+          {{subscribe_form placeholder="Your email address"}}
+          </div>
+          <p style="margin-top: 16px">
+          <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span></p>
+      </section>
+      {{/if}}
+      </div>
+      
+      </div>
+    </div>
+  </div>
+
+
+<div class="has-text-centered">
+      <p style="margin-top: 32px;">Main partners:</p>
+          <img class="image" src="/content/images/supported_by.png">
+</div>
+
+    
+  </div>
+</footer>

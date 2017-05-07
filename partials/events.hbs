@@ -1,0 +1,35 @@
+  <section id="upcoming" class="section is-small" style="background-color: rgb(193, 244, 236);">
+    <div class="container">
+      <h1 class="title is-1 has-text-centered">Upcoming events</h1>
+    <div class="columns">
+      {{#get "posts" limit="3" filter="tags:[event]" include="tags,author"}}
+      
+      {{#foreach posts}}
+      
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image" style="max-height: 240px; overflow: hidden">
+              <img class="image" src="{{image}}" alt="{{title}}" >
+            </figure>
+          </div>
+          <div class="card-header">
+          <div class="card-header-title">
+           <a href="{{url}}">{{title}}</a>
+          </div>
+        </div>
+                  <div class="card-content">
+                    <div class="content">
+                      {{excerpt words="26"}}
+                    </div>
+                  </div>
+                  <footer class="card-footer">
+                    <a href="{{url}}" class="card-footer-item  read-more">Read more</a>
+                  </footer>
+            </div><!-- card -->
+        </div> <!-- column -->
+        {{/foreach}}
+        {{/get}}
+      </div> <!-- columns -->
+    </div>
+  </section>

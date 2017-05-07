@@ -1,0 +1,39 @@
+  <div class="section">
+  <h3 class="title">Latest News</h3>
+  
+  {{#get "posts" limit="3" filter="tags:[news]" include="tags,author"}}
+  
+  {{#foreach posts}}
+    <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+              <h2 class="title is-5"><a href="{{url}}">{{title}}</a></h2>
+              <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </div>
+          </article>  
+        </div>
+  {{/foreach}}
+  
+  {{/get}}
+  </div>
+
+  <div class="section">
+  <h3 class="title">Upcoming Events</h3>
+
+  {{#get "posts" limit="3" filter="tags:[event]"include="tags,author"}}
+  
+  {{#foreach posts}}
+  <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <h2 class="title is-5"><a href="{{url}}">{{title}}</a></h2>
+              <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </div>
+          </article>
+  </div>
+  {{/foreach}}
+  
+  {{/get}}
+
+  </div>
