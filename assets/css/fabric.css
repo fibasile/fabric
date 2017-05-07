@@ -108,13 +108,7 @@ figcaption {
 }
 
 
-.nav-toggle:hover {
-  background-color:transparent;
-  color: #00D8B4;
-}
-.nav-toggle:hover span {
-   background-color:#00D8B4;
-}
+
 
 section.bg-inverted, div.bg-inverted, p.bg-inverted {
   color: white;
@@ -184,11 +178,21 @@ body.page #top-menu {
   background-color: white;
 }
 */
+
 #top-menu .nav-toggle span{
   background-color: white;
 }
 #top-menu.nav-opaque .nav-toggle span {
   background-color: #00D8B4;
+}
+
+#top-menu .nav-toggle:hover {
+  background-color:transparent;
+  color: #00D8B4;
+}
+
+#top-menu .nav-toggle:hover span {
+   background-color:#00D8B4;
 }
 
 
