@@ -34,6 +34,7 @@ figcaption {
 
 #slogan-container video{
   max-width: inherit;
+
 }
 
 #slogan {
@@ -45,6 +46,7 @@ figcaption {
   padding-top: 100px;
   margin-left: auto;
   margin-right: auto;
+  background: rgba(0,0,0,0.7);
 }
 
 
@@ -114,7 +116,7 @@ figcaption {
    background-color:#00D8B4;
 }
 
-section.bg-inverted {
+section.bg-inverted, div.bg-inverted, p.bg-inverted {
   color: white;
 }
 
