@@ -49,6 +49,8 @@ $(document).ready(function(){
       }
   }
   
+  $('#videoplayer').fitVids();
+  
   $( document ).scroll(checkScroll);
   
   checkScroll();
