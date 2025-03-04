@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "/favicon-16x16.png"}}">
+
+    {{!-- Styles'n'Scripts --}}
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+    <!--link href="https://fonts.googleapis.com/css?family=Quicksand|Titillium+Web" rel="stylesheet"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{asset "css/animate.css"}}" type="text/css" media="screen">
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+    <link rel="stylesheet" href="{{asset "css/fabric.css"}}" type="text/css" media="screen">
+    <style type="text/css"> 
+        body {
+            /*background-color: #3ebcacd6;*/
+        }       
+        .container {
+            /*background-color: #ACD7C1;*/
+            /*background-color: #3ebcac;*/
+            background-color: #3ebcacd6;
+
+            /*background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgb(255, 185, 198), rgb(105, 79, 246)) repeat scroll 0% 0%;*/
+        }
+        .section {
+            background-color: transparent;
+        }
+        header p {
+            color: white;
+        }
+        #top-menu {
+            /*color: #fff;*/
+            /*background-color: rgba(255,255,255,0);*/
+        }
+        #top-menu .nav-toggle span {
+            background-color: #00D8B4;
+        }
+        h1 {
+            font-weight: bold;
+            margin-top: 24px;
+            font-size: 2.1em;
+            text-transform: uppercase;
+        }
+        .mt-24 {
+            padding-top: 24px;
+        }
+        .slogan-title {
+            display: flex;
+            justify-content: center;
+
+        }
+        .slogan-title > * + * {
+            margin-left: 2rem;
+        }
+        .buttons {
+            padding-top: 34px;
+        }
+        .buttons .button, .buttons a {
+            display: block;
+            font-size: 1.5em;
+            margin: 1.5em 0;
+            height: auto;
+            white-space: normal;
+            color: #00024D;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid #fff;
+        }
+        .button:hover, .button:focus, .button:active,
+        a:hover, a:focus, a:active {
+            background-color: #fff;
+        }
+        button.is-rounded, a.is-rounded {
+          border-radius: 9999px;
+          padding-left: calc(1em + .25em);
+          padding-right: calc(1em + .25em);
+        }
+        @media screen and (min-width: 1000px) {
+            .is-max-desktop {
+                margin: 0 auto;
+                max-width: 960px;
+                width: 960px;
+              }
+            }
+        }
+    </style>
+</head>
+<body class="{{body_class}} is-marginless   is-paddingless">
+  
+  {{> topmenu }}
+  
+  <div class="container">
+
+{{#post}}
+<section id="links" class="section is-medium bg-inverted has-text-centered  is-max-desktop">
+    <header class="">
+        <div class="slogan-title is-hidden-mobile">
+            <img class="animated bounceInDown" src="/assets/fabricademy-logow.svg" style="width: 100px">
+            <h1 class="animated bounceInDown">FABRICADEMY</h1>
+        </div>
+        <p style="padding-top: 1em;">Suggested links to get started</p>
+    </header>
+    <div class="buttons">
+        {{ content }}
+    </div>
+</section>
+{{/post}}
+
+</div>
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{asset "js/jquery.vide.min.js"}}"></script>
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{asset "js/smooth-scroll.min.js"}}"></script>
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{asset "js/fabric.js"}}"></script>
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+
+</body></html>
