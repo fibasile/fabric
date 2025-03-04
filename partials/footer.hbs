@@ -30,24 +30,25 @@
     <div class="column">
      {{> socialmenu}}
     </div>
-    <div class="column is-half">
+    <div class="column is-one-third">
       <hr class="is-hidden-tablet"/>
       <div class="has-text-centered">
       <div class="box">
       {{!-- Email subscribe form at the bottom of the page --}}
-      {{#if @labs.subscribers}}
+      {{!-- #if @labs.subscribers --}}
       <section class="gh-subscribe">
           <h3 class="gh-subscribe-title title is-4">Subscribe to {{@blog.title}} newsletter</h3>
           <p>Get the latest posts delivered right to your inbox.</p>
-          <div style="margin-top: 16px">
-          {{subscribe_form placeholder="Your email address"}}
+          <div class="has-text-left" style="margin-top: 16px">
+          {{> newsletter }}
+          {{!-- subscribe_form placeholder="Your email address" --}}
           </div>
-          <p style="margin-top: 16px">
-          <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span></p>
+          {{!-- <p style="margin-top: 16px">
+          <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span></p> --}}
       </section>
-      {{/if}}
+      {{!-- /if --}}
       </div>
-      
+
       </div>
     </div>
   </div>
@@ -58,7 +59,7 @@
       <img class="image" style="margin: 0 auto" src="/content/images/supported_by.svg">
 </div>
 
-    
+
   </div>
 </footer>
 
