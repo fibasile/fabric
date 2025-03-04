@@ -1,5 +1,5 @@
 html, body, button, p {
- font-family: 'Titillium Web', sans-serif;
+ font-family: 'Montserrat', sans-serif; /* 'Titillium Web' */
  font-size: 102%;
 }
 
@@ -10,12 +10,12 @@ html, body {
 }
    
 .title, .subtitle, h1, h2, h3, h4, h5 {
-     font-family: 'Quicksand', sans-serif;
+     font-family: 'Montserrat', sans-serif; /* 'Quicksand' */
      font-weight: bold;
 }
 
 figcaption {
-    font-family: 'Titillium Web',sans-serif;
+    font-family: 'Montserrat',sans-serif; /* 'Titillium Web' */
     font-size: 1.1em
 }
 
@@ -40,8 +40,8 @@ figcaption {
 #slogan {
 /*  position: relative;*/
 /*  height:100%;*/
-  min-height: 800px;
-  height: 1000px;
+  max-height: 1000px;
+  height: 100vh;
   color: white;
   padding-top: 100px;
   margin-left: auto;
@@ -50,29 +50,47 @@ figcaption {
 }
 
 
-
 #slogan .slogan-title h1 {
-    font-size: 3.5em;
+    font-size: min(5em, 10vw);
 }
 
 #slogan .slogan-title h2 {
   font-weight: bold;
   margin-top: 24px;
-  font-size: 2.1em;
+  font-size: min(2em, 4vw);
   text-transform: uppercase;
 }
 
 #slogan .slogan-title h3 {
-  font-size: 1.3em;
-  margin-left: 12px;
-  margin-right: 12px;
+  font-size: 3vw;
+  font-size: min(1.2rem, 3vw);
+  max-width: 70vw;
+  margin: 100px auto 0;
+
 }
 
 #enroll{
-  margin-top: 24px;
+  margin-top: 80px;
   -webkit-animation-delay: 2.5s;
   -moz-animation-delay: 2.5s;
 } 
+
+@media screen and (max-width: 768px)  {
+  #slogan .slogan-title h3 {
+    max-width: 100%;
+    margin: 100px 12px 0;
+  }
+}
+@media screen and (max-height: 800px)  {
+  #slogan .slogan-title h3 {
+    max-width: 100%;
+    margin: 80px 12px 0;
+  }
+  #enroll{
+    margin-top: 30px;
+  }
+}
+
 
 .step3{
   -webkit-animation-delay: .5s;
@@ -99,12 +117,26 @@ figcaption {
   
 }
 
-.nav-item a, a.nav-item,  a.nav-item:hover, .nav-item a:visited {
-  color: #00D8B4;
+.home-template .nav-item a, .home-template  a.nav-item, .home-template a.nav-item:hover, .home-template .nav-item a:visited {
+  /* color: #00D8B4; prev 24march24 */
+  color: white;
+}
+
+.home-template .nav-opaque .nav-item a,
+.home-template .nav-opaque a.nav-item,
+.home-template .nav-opaque a.nav-item:hover,
+.home-template .nav-opaque .nav-item a:visited {
+  color: #372971;
 }
 
 .nav-item img {
   max-height: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu.nav-right .nav-item {
+    color: #00D8B4;
+  }
 }
 
 
@@ -145,6 +177,10 @@ body.home-template #top-menu {
   
 }
 
+body.page-links #top-menu {
+  background-color: rgba(255,255,255,0);
+}
+
 
 
 body.page #top-menu {
@@ -171,7 +207,14 @@ body.page #top-menu {
   background-color:transparent;
 }
 
-#top-menu.nav-opaque nav{
+.home-template #top-menu .nav-brand {
+  filter: brightness(10);
+}
+.home-template #top-menu.nav-opaque .nav-brand {
+  filter: none;
+}
+
+.home-template #top-menu.nav-opaque nav{
   background-color: white;
 }
 /*.hamburger span, .nav-toggle span{
@@ -179,10 +222,10 @@ body.page #top-menu {
 }
 */
 
-#top-menu .nav-toggle span{
+.home-template #top-menu .nav-toggle span{
   background-color: white;
 }
-#top-menu.nav-opaque .nav-toggle span {
+.home-template #top-menu.nav-opaque .nav-toggle span {
   background-color: #00D8B4;
 }
 
