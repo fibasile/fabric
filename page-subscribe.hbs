@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{#post}}
+  
+<div style="margin-top: 100px; max-height: 400px; overflow-y:hidden">
+
+{{#if image}}<img class="image" src="{{image}}" width="100%">{{/if}}
+
+</div>
+
+<section class="section">
+<div class="content">
+
+<h1 class="title is-1 post-title">{{title}}</h1>
+ 
+<div class="post-content">
+     {{content}}
+</div>
+
+<div class="column is-one-third has-text-left" style="margin-top: 16px">
+  	{{> newsletter }}
+</div>
+ 
+</div>
+</section>
+
+
+{{/post}}
