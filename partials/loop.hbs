@@ -2,10 +2,15 @@
 {{#foreach posts}}
 <div class="box">
 <article class="media {{post_class}}">
+    {{#if feature_image}}
+        <figure class="media-left">
+            <img src="{{img_url feature_image}}" alt="Cover image for {{title}}" class="image is-128x128" style="object-fit: cover;">
+        </figure>
+    {{/if}}
     <div class="media-content">
-        <h2 class="title is-5"><a href="{{url}}">{{title}}</a></h2>
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-        <p style="font-size: 0.75rem; white-space: nowrap;">
+        <h2 class="title is-4"><a href="{{url}}">{{title}}</a></h2>
+        <p style="font-size: 80%;">{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+        <p style="font-size: 70%; white-space: nowrap; padding-top: 5px;">
             <span>Posted on </span>
             <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="Do MMMM YYYY"}}</time>
             {{tags prefix=" in "}}
@@ -13,6 +18,7 @@
     </div>
 </article>
 </div>
+<br>
 {{/foreach}}
 
 {{!-- Previous/next page links - displayed on every page --}}

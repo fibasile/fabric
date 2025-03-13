@@ -25,9 +25,11 @@
                 {{#foreach posts}}
                 <div class="box">
                         <article class="media">
+                          {{#if feature_image}}
                           <figure class="media-left">
-                              <img src="{{image}}" alt="Cover image for {{title}}" class="image is-128x128" style="object-fit: cover;">
+                              <img src="{{img_url feature_image}}" alt="Cover image for {{title}}" class="image is-128x128" style="object-fit: cover;">
                           </figure>
+                          {{/if}}
                           <div class="media-content">
                             <h3 class="title is-4"><a href="{{url}}">{{title}}</a></h3>
                             <p style="font-size: 80%;">{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>

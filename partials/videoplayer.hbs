@@ -8,9 +8,9 @@
     <div  class="video text-is-centered is-fullwidth">
 
     <video id="my-video" class="video-js" controls preload="auto"        
-        poster="/assets/video_cover.jpg" data-setup="{}">
-       <source src="/assets/full.mp4" type='video/mp4'>
-       <source src="/assets/full.webm" type='video/webm'>
+        poster="{{asset 'video_cover.jpg'}}" data-setup="{}">
+       <source src="{{asset 'full.mp4'}}" type='video/mp4'>
+       <source src="{{asset 'full.webm'}}" type='video/webm'>
        <p class="vjs-no-js">
          To view this video please enable JavaScript, and consider upgrading to a web browser that
          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
