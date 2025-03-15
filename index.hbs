@@ -1,23 +1,23 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{#if @blog.cover}}<img src="{{@blog.cover}}">{{else}}no-cover{{/if}}
+<div style="margin-top: 100px; max-height: 400px; overflow-y:hidden">
 
-{{#if @blog.logo}}
-  <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-{{/if}}
+<h1 class="title">{{@blog.title}}</h1>
+<h2 class="subtitle">{{@blog.description}}</h2>
 
-{{#if @blog.navigation}}
-  <a href="#"><span class="word">Menu</span></a>
-{{/if}}
-
-<h1>{{@blog.title}}</h1>
-<h2>{{@blog.description}}</h2>
+</div>
 
 {{!-- The main content area on the homepage --}}
-<main id="content" class="content" role="main">
+<main id="content" class="content" role="main" style="padding-top: 20px;">
+
+    <div class="column is-two-thirds">
+
+    <h3 class="subtitle is-5">Recent posts</h3>
 
     {{!-- The tag below includes the post loop - partials/loop.hbs --}}
     {{> "loop"}}
+
+    </div>
 
 </main>
