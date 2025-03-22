@@ -1,6 +1,6 @@
   <section id="blog" class="section is-small is-primary">
     <div class="container">
-      <h1 class="title is-1 has-text-centered">Projects</h1>
+      <h1 class="title is-1 has-text-centered"><a href="/tag/news" class="title is-1">Projects</a></h1>
     <div class="columns">
       {{#get "posts" limit="3" filter="tags:[news]" include="tags,author"}}
       {{#foreach posts}}
@@ -30,5 +30,8 @@
         {{/foreach}}
         {{/get}}
       </div> <!-- columns -->
+      <div class="has-text-centered" style="padding-top: 20px;">
+        <a href="/tag/event" class="button">Look at more projects posts</a>
+      </div>
     </div>
   </section>

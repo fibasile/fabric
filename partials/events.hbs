@@ -1,6 +1,6 @@
   <section id="upcoming" class="section is-small" style="background-color: rgb(193, 244, 236);">
     <div class="container">
-      <h1 class="title is-1 has-text-centered">News</h1>
+      <h1 class="title is-1 has-text-centered"><a href="/tag/event" class="title is-1">News</a></h1>
     <div class="columns">
       {{#get "posts" limit="3" filter="tags:[event]" include="tags,author"}}
       
@@ -31,5 +31,8 @@
         {{/foreach}}
         {{/get}}
       </div> <!-- columns -->
+      <div class="has-text-centered" style="padding-top: 20px;">
+        <a href="/tag/event" class="button">Look at more news posts</a>
+      </div>
     </div>
   </section>

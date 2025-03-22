@@ -238,6 +238,9 @@ body.page #top-menu {
    background-color:#00D8B4;
 }
 
+a.title:hover, .title > a:hover {
+  text-decoration: underline;
+}
 
 #videoplayer {
   background-color: #00D8B4;
