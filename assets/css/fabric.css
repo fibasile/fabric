@@ -259,6 +259,7 @@ body.page #top-menu {
 }
 #join {
   background-color:rgb(0, 204, 214);
+}
 
 #join-student {
   background-color: #dec987;
@@ -293,6 +294,13 @@ footer.footer .footer-menu a{
 
 #blog .card .read-more {
    display: inline;text-align: right;
+}
+
+.home-template .card-image .image > img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .poster {
