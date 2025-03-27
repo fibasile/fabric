@@ -23,10 +23,6 @@ $(document).ready(function(){
     $('.nav-right').toggleClass('is-active');
     
   });
-  
-  $('.gh-subscribe input').addClass('input').css('margin-bottom',10);
-  $('.gh-subscribe button').addClass('button is-primary').css('width','100%');
-
 
   function isScrolledIntoView(elem)
   {
